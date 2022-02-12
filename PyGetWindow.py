@@ -14,12 +14,21 @@
 
 >>> gw.getWindowsWithTitle('Untitled')
 (Win32Window(hWnd=264354),)
-
+################################################################################################
+############# Old fonction #############
+'''
 >>> gw.getFocusedWindow()
 Win32Window(hWnd=1050492)
 
 >>> gw.getFocusedWindow().title
 'C:\\WINDOWS\\system32\\cmd.exe - pipenv  shell - python'
+'''
+############# New fonction #############
+>>> gw.getActiveWindow()
+Win32Window(hWnd=1050492)
+>>> gw.getActiveWindow().title
+'C:\\WINDOWS\\system32\\cmd.exe - pipenv  shell - python'
+################################################################################################
 
 >>> gw.getWindowsAt(10, 10)
 (Win32Window(hWnd=67206), Win32Window(hWnd=66754), Win32Window(hWnd=329210), Win32Window(hWnd=1114374), Win32Window(hWnd=852550), Win32Window(hWnd=132508), Win32Window(hWnd=66964), Win32Window(hWnd=66882), Win32Window(hWnd=197282), Win32Window(hWnd=393880), Win32Window(hWnd=66810), Win32Window(hWnd=328466), Win32Window(hWnd=395034), Win32Window(hWnd=132928), Win32Window(hWnd=65882))
